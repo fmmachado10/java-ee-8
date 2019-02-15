@@ -9,11 +9,11 @@ import java.time.LocalDateTime;
 @SessionScoped
 public class SessionBean implements Serializable {
 
-    public static  Integer contador = 0;
+    public static Integer contador = 0;
 
     public SessionBean() {
 
-        contador ++;
+        contador++;
     }
 
     public static Integer getContador() {

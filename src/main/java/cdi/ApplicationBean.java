@@ -1,11 +1,10 @@
 package cdi;
 
-        import javax.annotation.PostConstruct;
-        import javax.annotation.PreDestroy;
-        import javax.enterprise.context.ApplicationScoped;
-        import javax.servlet.ServletException;
-        import java.io.Serializable;
-        import java.time.LocalDateTime;
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+import javax.enterprise.context.ApplicationScoped;
+import java.io.Serializable;
+import java.time.LocalDateTime;
 
 @ApplicationScoped
 public class ApplicationBean  implements Serializable {

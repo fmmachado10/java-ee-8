@@ -9,11 +9,11 @@ import java.time.LocalDateTime;
 @RequestScoped
 public class RequestBean implements Serializable {
 
-    public static  Integer contador = 0;
+    public static Integer contador = 0;
 
     public RequestBean() {
 
-        contador ++;
+        contador++;
 
     }
 

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+
+
+<h:head>
+    <title>asdfasdf</title>
+</h:head>
+
+<h:body>
+
+    <hr/>
+
+    <h1>App Jsf</h1>
+
+    <h:form id="idIndex">
+
+        <h:outputLabel value="Primeira página"></h:outputLabel>
+
+        <h:commandButton value="Enviar" action="#{indexController.mostrarMensagem}"/>
+
+        <h:outputLabel value="#{indexController.mensagem}" />
+
+        <h:outputLabel value="#{indexController.nome}" />
+
+
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+
+
+
+
+
+
+
+        <h:outputLabel>Nova Mensagem: </h:outputLabel>
+        <input type="text" name="novaMensagem" />
+
+        <h:commandButton value="Mudar Mensagem" action="#{indexController.mudarMensagem}"/>
+
+
+
+
+
+
+
+
+
+    </h:form>
+
+
+</h:body>
+
+
+</html>
