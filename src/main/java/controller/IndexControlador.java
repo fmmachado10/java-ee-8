@@ -1,6 +1,5 @@
 package controller;
 
-import javax.annotation.PostConstruct;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 import java.io.Serializable;
@@ -9,20 +8,28 @@ import java.io.Serializable;
 @SessionScoped
 public class IndexControlador implements Serializable {
 
-    private String mensagem = "Olá! Fabrício";
 
     private String nome;
 
-    private Integer contador = 0;
+    private String mensagem;
 
+    private Integer contador;
 
-    @PostConstruct
-    private void init() {
-
-        System.out.println("Pos Construct");
-
+    public void mostrarMensagem() {
+        System.out.println(nome);
     }
 
+    public void mudarMensagem() {
+        System.out.println("asasdfasdf");
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
     public String getMensagem() {
         return mensagem;
@@ -32,20 +39,11 @@ public class IndexControlador implements Serializable {
         this.mensagem = mensagem;
     }
 
-    public void mostrarMensagem() {
-
-        setMensagem("mudando mensagem..." + contador++);
+    public Integer getContador() {
+        return contador;
     }
 
-    public void mudarMensagem() {
-        setMensagem("");
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setContador(Integer contador) {
+        this.contador = contador;
     }
 }

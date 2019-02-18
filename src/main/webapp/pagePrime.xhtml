@@ -6,49 +6,42 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
+<f:view>
+    <h:form id="idForm">
 
+        <h:panelGrid>
 
-
-<h:head>
-    <title>asdfasdf</title>
-</h:head>
-
-<h:body>
-
-    <hr/>
-
-    <h1>App Jsf</h1>
-
-    <h:form id="idIndex">
-
-        <h:outputLabel value="Primeira página"></h:outputLabel>
-
-        <h:commandButton value="Enviar" action="#{indexController.mostrarMensagem}"/>
-
-        <h:outputLabel value="#{indexController.mensagem}" />
-
-        <h:outputLabel value="#{indexController.nome}" />
-
+        <h:outputText value="Tela de Cadastrar"/>
+        <br></br>
+        <p:outputLabel style="width: 200px">Nome: </p:outputLabel>
+        <p:inputText style="width: 200px"></p:inputText>
 
         <br></br>
+        <p:outputLabel style="width: 200px;">Endereço: </p:outputLabel>
+        <p:inputText style="width: 200px;"></p:inputText>
+
+        </h:panelGrid>
+
         <br></br>
+        <p:commandButton value="Cadastrar"></p:commandButton>
+        <p:commandButton value="Limpar"></p:commandButton>
+
         <br></br>
-        <br></br>
 
+        <p:panelGrid>
 
+            <p:dataTable var="car" value="#{listaPessoa}">
+                <p:column headerText="Nome">
+                    <h:outputText value="#{listaPessoa.nome}" />
+                </p:column>
 
+                <p:column headerText="Color">
+                    <h:outputText value="#{listaPessoa.endereco}" />
+                </p:column>
 
+            </p:dataTable>
 
-
-
-        <h:outputLabel>Nova Mensagem: </h:outputLabel>
-        <input type="text" name="novaMensagem" />
-
-        <h:commandButton value="Mudar Mensagem" action="#{indexController.mudarMensagem}"/>
-
-
-
-
+        </p:panelGrid>
 
 
 
@@ -56,8 +49,7 @@
 
     </h:form>
 
-
-</h:body>
+</f:view>
 
 
 </html>
