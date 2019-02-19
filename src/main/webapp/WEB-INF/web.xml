@@ -6,7 +6,7 @@
          version="4.0">
 
 
-    <display-name>Aplicação JSF 2.3, CDI 2.0</display-name>
+    <display-name>JAVA-EE-8</display-name>
 
     <servlet>
         <servlet-name>Faces Servlet</servlet-name>
@@ -33,11 +33,6 @@
     <context-param>
         <param-name>javax.faces.FACELETS_SKIP_COMMENTS</param-name>
         <param-value>true</param-value>
-    </context-param>
-
-    <context-param>
-        <param-name>primefaces.THEME</param-name>
-        <param-value>aristo</param-value>
     </context-param>
 
     <welcome-file-list>

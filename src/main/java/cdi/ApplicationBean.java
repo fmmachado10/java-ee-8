@@ -7,40 +7,27 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @ApplicationScoped
-public class ApplicationBean  implements Serializable {
+public class ApplicationBean implements Serializable {
 
-    public static  Integer contador = 0;
+    public static int contador;
 
     public ApplicationBean() {
-
-        contador ++;
-
+        contador++;
+        System.out.println("ApplicationBean - Construtor: " + LocalDateTime.now());
     }
 
-    public static Integer getContador() {
-
-        return contador;
-    }
-
-    public static void setContador(Integer contador) {
-
-        ApplicationBean.contador = contador;
-
+    public String imprimeContador (){
+        return String.valueOf(contador);
     }
 
     @PostConstruct
-    private void init() {
-
-        System.out.println("Fui criado ApplicationScoped..." + LocalDateTime.now());
-
+    private void innit (){
+        System.out.println("ApplicationBean - PostConstruct: " + LocalDateTime.now());
     }
 
     @PreDestroy
-    public void destroy() {
-
-        System.out.println("Fui destruido ApplicationScoped..." + LocalDateTime.now());
-
+    private void end (){
+        System.out.println("ApplicationBean - PreDestroy: " + LocalDateTime.now());
     }
-
 
 }

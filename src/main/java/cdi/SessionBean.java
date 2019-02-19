@@ -9,35 +9,24 @@ import java.time.LocalDateTime;
 @SessionScoped
 public class SessionBean implements Serializable {
 
-    public static Integer contador = 0;
+    public static int contador;
 
     public SessionBean() {
-
+        System.out.println("RequestBean - Construtor: " + LocalDateTime.now());
         contador++;
     }
 
-    public static Integer getContador() {
-        return contador;
-    }
-
-    public static void setContador(Integer contador) {
-
-        SessionBean.contador = contador;
-
+    public String imprimeContador (){
+        return String.valueOf(contador);
     }
 
     @PostConstruct
-    private void init() {
-
-        System.out.println("Fui criado SessionScoped..." + LocalDateTime.now());
-
+    private void innit (){
+        System.out.println("SessionBean - PostConstruct: " + LocalDateTime.now());
     }
 
     @PreDestroy
-    public void destroy() {
-
-        System.out.println("Fui destruido SessionScoped..." + LocalDateTime.now());
-
+    private void end (){
+        System.out.println("SessionBean - PreDestroy: " + LocalDateTime.now());
     }
-
 }
